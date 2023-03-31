@@ -34,8 +34,6 @@ export default {
 		'@nuxt/typescript-build',
 		// https://go.nuxtjs.dev/stylelint
 		'@nuxtjs/stylelint-module',
-		// https://html-validator.nuxtjs.org/
-		'@nuxtjs/html-validator',
 		// https://github.com/nuxt-community/fontawesome-module
 		'@nuxtjs/fontawesome',
 		// https://google-fonts.nuxtjs.org/
@@ -43,15 +41,6 @@ export default {
 		// https://github.com/mole-inc/nuxt-validate
 		'@mole-inc/nuxt-validate',
 	],
-
-	// nuxt/html-validator configuration: https://html-validator.nuxtjs.org/
-	htmlValidator: {
-		options: {
-			rules: {
-				'attribute-empty-style': 'off', // 空の属性値を許可
-			}
-		}
-	},
 
 	// FontAwesome module configuration: https://github.com/nuxt-community/fontawesome-module
 	fontawesome: {
