@@ -173,6 +173,14 @@ DI-KITではESLintを標準利用しているのでコチラのプラグイン�
 
 [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
+### Markuplint
+
+Markuplintは、HTMLなどマークアップ用の解析ツールです。  
+DI-KITではHTMLの構文チェックを行っていないのでコチラのプラグインの利用を推奨します。  
+必要なパッケージはインストール済みですので、プラグインのインストールと設定を行うだけで利用出来ます。  
+
+[Markuplint](https://marketplace.visualstudio.com/items?itemName=yusukehirao.vscode-markuplint&ssr=false#overview)
+
 ### その他
 
 あると便利なプラグインも紹介しておきます。  
