@@ -42,7 +42,7 @@ build: {
 </pre>
 
 			<h2>手順3: tsconfig.jsonを編集</h2>
-			<p>tsconfig.json内の"types": []内に、以下を参考に追記します。</p>
+			<p>tsconfig.json内の&quot;types&quot;: []内に、以下を参考に追記します。</p>
 			<p>（types:[]内に他の記述がある場合は削除せず組み込んでください）</p>
 
 <pre>
@@ -78,11 +78,14 @@ export default Vue.extend({
 </pre>
 
 			<h2>動作サンプル</h2>
-			<div id="sampleImage" style="width:500px">
+			<div id="sampleImage" class="image_box">
 				<img
 					src="/images/sample_image.jpg"
 					alt="サンプル画像"
-					style="max-width:100%">
+					width="500"
+					height="250"
+					decoding="async"
+				>
 			</div>
 		</main>
 		<SiteFooter />
@@ -110,5 +113,12 @@ export default Vue.extend({
 <style lang="scss" scoped>
 ::v-deep .text-jquery {
 	color: #7acef4;
+}
+.image_box {
+	width: 500px;
+	height: 250px;
+}
+img {
+	max-width: 100%;
 }
 </style>
