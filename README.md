@@ -175,11 +175,25 @@ DI-KITではESLintを標準利用しているのでコチラのプラグイン�
 
 ### Markuplint
 
-Markuplintは、HTMLなどマークアップ用の解析ツールです。  
-DI-KITではHTMLの構文チェックを行っていないのでコチラのプラグインの利用を推奨します。  
-必要なパッケージはインストール済みですので、プラグインのインストールと設定を行うだけで利用出来ます。  
+Markuplintは、HTMLなどのマークアップ構文をチェックするツールで、VisualStudio Codeのプラグインを通して動作します。  
+DI-KITではHTMLの構文チェックを行っていないので、markuplintの利用を推奨します。  
+必要なパッケージはインストール済みですので、VisualStudio Code上でプラグインをインストールし、設定ファイルを作成するだけで利用出来ます。
 
-[Markuplint](https://marketplace.visualstudio.com/items?itemName=yusukehirao.vscode-markuplint&ssr=false#overview)
+[Markuplintプラグイン](https://marketplace.visualstudio.com/items?itemName=yusukehirao.vscode-markuplint&ssr=false#overview)
+
+設定ファイルはこのREADME.mdと同じ階層にある`.markuplintrc`というファイルです。
+VisualStudio Codeの`settings.json`などでルールを固定化している方は、`.markuplintrc`が存在するとルールが上書きされますので、`.markuplintrc`を削除してお使いください。
+
+[設定ファイルの説明](https://markuplint.dev/ja/docs/configuration)
+
+設定ファイルに記述するルールは、以下を参照してください。
+
+[ルールの説明](https://markuplint.dev/ja/docs/rules)
+
+より高度な設定をしたい方は、プロパティ設定のページも併せて参照してください。
+
+[プロパティの説明](https://markuplint.dev/ja/docs/configuration/properties)
+
 
 ### その他
 
