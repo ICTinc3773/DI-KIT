@@ -1,188 +1,162 @@
-DI-KIT
-==================================================
+# DI-KIT
 
+## インストール
 
+DI-KIT を用いてプロジェクトを開始する方法を説明します。  
+インストールは下記の 2 ステップで完了です。
 
-インストール
---------------------------------------------------
+1. DI-KIT の入手
+2. Node.js パッケージのインストール
 
-DI-KITを用いてプロジェクトを開始する方法を説明します。  
-インストールは下記の2ステップで完了です。
+### DI-KIT の入手
 
-1. DI-KITの入手
-2. Node.jsパッケージのインストール
-
-
-### DI-KITの入手
-
-DI-KITは下記のgitリポジトリからクローン、もしくはZIPダウンロードしてください。  
+DI-KIT は下記の git リポジトリからクローン、もしくは ZIP ダウンロードしてください。
 
 https://github.com/ICTinc3773/di-kit
 
-※クローン時に作成されるフォルダ名「DI_KIT-SFC」は適宜変更可能です。    
+※クローン時に作成されるフォルダ名「DI_KIT-SFC」は適宜変更可能です。
 
+### Node.js のインストール
 
-### Node.jsのインストール
+DI-KIT を動作させるには Node.js が必要です。
 
-DI-KITを動作させるにはNode.jsが必要です。
+https://nodejs.org/en/download/prebuilt-installer より v16.20.2 をダウンロードしてください。
+（動作確認バージョンは v16.13.2 です）
 
-https://nodejs.org/ja/ より推奨版をダウンロードしてください。
-（動作確認バージョンはv16.13.2です）
+### Node.js パッケージのインストール
 
-
-### Node.jsパッケージのインストール
-
-DI-KITの動作に必要なパッケージをインストールします。  
+DI-KIT の動作に必要なパッケージをインストールします。  
 環境に合わせて以下の手順で実施してください。  
-なお、以下手順ではhttpでクローンした場合を想定しています。
+なお、以下手順では http でクローンした場合を想定しています。
 
-※インストール中に`Are you interested in participating?`が表示されて処理が止まった場合は、キーボードで`n`を入力して`Enterキー`を押してください。  
+※インストール中に`Are you interested in participating?`が表示されて処理が止まった場合は、キーボードで`n`を入力して`Enterキー`を押してください。
 
+#### Windows の場合
 
-#### Windowsの場合
-
-1. エクスプローラーでDI_KIT-SFCフォルダを開く  
+1. エクスプローラーで DI_KIT-SFC フォルダを開く
 2. `_install.bat`ファイルをダブルクリックする
-3. コマンドプロンプトが閉じるまで待つ  
+3. コマンドプロンプトが閉じるまで待つ
 
+#### Ｍ acOS の場合
 
-#### ＭacOSの場合
-
-1. ターミナルを起動しDI_KIT-SFCフォルダまで移動する
+1. ターミナルを起動し DI_KIT-SFC フォルダまで移動する
 2. `npm install`コマンドを実行する
 
+## 起動と停止
 
+### DI-KIT の起動方法
 
-起動と停止
---------------------------------------------------
+DI-KIT には、動作確認用の簡易的な Web サイトが同梱されています。  
+以下の手順では動作確認用 Web サイトの表示まで示します。  
+なお、以下手順では http でクローンした場合を想定しています。
 
+※URL は 3000 番ポートを固定で使用します。  
+他アプリケーションで 3000 番ポートが使用中の場合は、該当のアプリケーションを停止してください。
 
-### DI-KITの起動方法
+#### Windows の場合
 
-DI-KITには、動作確認用の簡易的なWebサイトが同梱されています。  
-以下の手順では動作確認用Webサイトの表示まで示します。  
-なお、以下手順ではhttpでクローンした場合を想定しています。  
-
-※URLは3000番ポートを固定で使用します。  
-他アプリケーションで3000番ポートが使用中の場合は、該当のアプリケーションを停止してください。  
-
-
-#### Windowsの場合
-
-1. エクスプローラーでDI_KIT-SFCフォルダを開く  
+1. エクスプローラーで DI_KIT-SFC フォルダを開く
 2. `_start.bat`ファイルをダブルクリックする
-3. コマンドプロンプトに`No issues found.`が表示されるまで待つ  
+3. コマンドプロンプトに`No issues found.`が表示されるまで待つ
 4. 任意のブラウザを起動し、`http://localhost:3000`にアクセスする
 
+#### MacOS の場合
 
-#### MacOSの場合
-
-1. ターミナルでDI_KIT-SFCフォルダまで移動する
+1. ターミナルで DI_KIT-SFC フォルダまで移動する
 2. `npm run dev`コマンドを実行する
 3. ターミナルに`No issues found.`が表示されるまで待つ
 4. 任意のブラウザを起動し、`http://localhost:3000`にアクセスする
 
+### DI-KIT の停止方法
 
-### DI-KITの停止方法
+`_start.bat`をダブルクリックした際に起動したコマンドプロンプト、PowerShell、ターミナルなどを閉じると停止します。
 
-`_start.bat`をダブルクリックした際に起動したコマンドプロンプト、PowerShell、ターミナルなどを閉じると停止します。  
+## ディレクトリ構造
 
+ここからは、DI-KIT のディレクトリ構造の説明をしていきます。  
+DI-KIT で主に使用するディレクトリは下記の 4 つになります。
 
-
-ディレクトリ構造
---------------------------------------------------
-
-ここからは、DI-KITのディレクトリ構造の説明をしていきます。  
-DI-KITで主に使用するディレクトリは下記の4つになります。
-
-* assets
-* components
-* pages
-* static
-
+- assets
+- components
+- pages
+- static
 
 ### assets
 
-assetsには、サイト全域でグローバルに利用するSassファイル、変換の必要な画像など、コンパイルで変換するファイルが格納されます。  
-より詳しい情報は[Nuxt.jsの公式ドキュメント](https://nuxtjs.org/docs/directory-structure/assets/)を参照してください。  
-デフォルトでは3つのファイルを用意してあります。  
-
+assets には、サイト全域でグローバルに利用する Sass ファイル、変換の必要な画像など、コンパイルで変換するファイルが格納されます。  
+より詳しい情報は[Nuxt.js の公式ドキュメント](https://nuxtjs.org/docs/directory-structure/assets/)を参照してください。  
+デフォルトでは 3 つのファイルを用意してあります。
 
 ### components
 
-componentsディレクトリには、コンポーネントファイルを拡張子`.vue`で作成します。  
+components ディレクトリには、コンポーネントファイルを拡張子`.vue`で作成します。  
 コンポーネントは「汎用的な部品」として、次の項で説明する`pages`の各ファイルや、`components`内で作成したほかのコンポーネントからも利用できます。
-
 
 ### pages
 
 このディレクトリに設置したファイルが、サイト内の各ページとなります。  
-componentsと併せて最も利用するディレクトリです。  
+components と併せて最も利用するディレクトリです。
 
-拡張子はcomponentsと同じく`.vue`で、これらのファイルをすべて読み込んで、ページの相対パスを自動的にルーティングします。  
+拡張子は components と同じく`.vue`で、これらのファイルをすべて読み込んで、ページの相対パスを自動的にルーティングします。
 
 例  
-pages/about.vue → https://xxx.com/about/index.html  
-
+pages/about.vue → https://xxx.com/about/index.html
 
 ### static
 
-staticディレクトリには、変換不要な画像、PHPファイルなど、コンパイルで変換せずそのまま利用するファイルを配置しておきます。  
-staicディレクトリ内のファイルは、`generate`で静的化する際に`dist`直下に出力され、URLとしてはルートディレクトリにマップされます。  
-（generateとdistについては、併せて次の項で記述しています）  
+static ディレクトリには、変換不要な画像、PHP ファイルなど、コンパイルで変換せずそのまま利用するファイルを配置しておきます。  
+staic ディレクトリ内のファイルは、`generate`で静的化する際に`dist`直下に出力され、URL としてはルートディレクトリにマップされます。  
+（generate と dist については、併せて次の項で記述しています）
 
-HTMLの`src`等でのパス指定では、下記のように記述することで`static`内のファイルを利用できます。  
+HTML の`src`等でのパス指定では、下記のように記述することで`static`内のファイルを利用できます。
 
 例  
 static/images/sample_image.jpg に格納したファイル  
 `<img src="/images/sample_image.jpg">`で利用
 
-
 ### dist
 
-distディレクトリは、DI-KITのインストールを実行した段階では生成されていません。  
-`npm run generate`をコマンドプロンプトやターミナルで実行することで、各種コンパイルを通して生成され、内部には静的化した各種ファイルが出力されます。  
+dist ディレクトリは、DI-KIT のインストールを実行した段階では生成されていません。  
+`npm run generate`をコマンドプロンプトやターミナルで実行することで、各種コンパイルを通して生成され、内部には静的化した各種ファイルが出力されます。
 
-distディレクトリに出力された内容をサーバ上に公開していただくことでサイトが閲覧できるようになります。  
-（エクスプローラーやFinderでHTMLファイルを直接ダブルクリックしても、JSやCSSが読み込みできず表示崩れとなります）  
+dist ディレクトリに出力された内容をサーバ上に公開していただくことでサイトが閲覧できるようになります。  
+（エクスプローラーや Finder で HTML ファイルを直接ダブルクリックしても、JS や CSS が読み込みできず表示崩れとなります）
 
-なお、DI-KITでは、Windows向けにgenerate処理用のbatファイルを用意してあります。  
-プロジェクト内の最上位階層にある`_generate.bat`ファイルをダブルクリックすると、標準設定されたコマンドプロンプトやPowerShellなどターミナルで`npm run generate`コマンドが実行されます。  
+なお、DI-KIT では、Windows 向けに generate 処理用の bat ファイルを用意してあります。  
+プロジェクト内の最上位階層にある`_generate.bat`ファイルをダブルクリックすると、標準設定されたコマンドプロンプトや PowerShell などターミナルで`npm run generate`コマンドが実行されます。
 
-MacOSでは外部作成したスクリプトファイルを実行できないので、ターミナルを起動してnpm run generateコマンドを実行してください。  
+MacOS では外部作成したスクリプトファイルを実行できないので、ターミナルを起動して npm run generate コマンドを実行してください。
 
+## VSCode の利用推奨と推奨プラグイン
 
-VSCodeの利用推奨と推奨プラグイン
---------------------------------------------------
-
-DI-KITではVue.jsを用いてコーディングしていきます。  
-コーディングがしやすい環境としてVSCodeの利用を推奨し、インストールを推奨するプラグインを以下に紹介します。  
+DI-KIT では Vue.js を用いてコーディングしていきます。  
+コーディングがしやすい環境として VSCode の利用を推奨し、インストールを推奨するプラグインを以下に紹介します。
 
 ### Vetur
 
-このプラグインを入れる事でシンタックスハイライトやHTML, JavaScriptのコード補完が効くようになります。 
-DI-KITではVue2系を使用しているのでコチラのプラグインの利用を推奨します。  
+このプラグインを入れる事でシンタックスハイライトや HTML, JavaScript のコード補完が効くようになります。
+DI-KIT では Vue2 系を使用しているのでコチラのプラグインの利用を推奨します。
 
 [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 
 ### ESLint
 
-ESLintは、JavaScriptの静的検証ツールです。  
-DI-KITではESLintを標準利用しているのでコチラのプラグインの利用も推奨します。  
-コーディングの段階で構文チェックを行ってくれるので、ビルド時のエラーなどを未然に防ぐことが出来ます。  
+ESLint は、JavaScript の静的検証ツールです。  
+DI-KIT では ESLint を標準利用しているのでコチラのプラグインの利用も推奨します。  
+コーディングの段階で構文チェックを行ってくれるので、ビルド時のエラーなどを未然に防ぐことが出来ます。
 
 [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ### Markuplint
 
-Markuplintは、HTMLなどのマークアップ構文をチェックするツールで、VisualStudio Codeのプラグインを通して動作します。  
-DI-KITではHTMLの構文チェックを行っていないので、markuplintの利用を推奨します。  
-必要なパッケージはインストール済みですので、VisualStudio Code上でプラグインをインストールし、設定ファイルを作成するだけで利用出来ます。
+Markuplint は、HTML などのマークアップ構文をチェックするツールで、VisualStudio Code のプラグインを通して動作します。  
+DI-KIT では HTML の構文チェックを行っていないので、markuplint の利用を推奨します。  
+必要なパッケージはインストール済みですので、VisualStudio Code 上でプラグインをインストールし、設定ファイルを作成するだけで利用出来ます。
 
-[Markuplintプラグイン](https://marketplace.visualstudio.com/items?itemName=yusukehirao.vscode-markuplint&ssr=false#overview)
+[Markuplint プラグイン](https://marketplace.visualstudio.com/items?itemName=yusukehirao.vscode-markuplint&ssr=false#overview)
 
-設定ファイルはこのREADME.mdと同じ階層にある`.markuplintrc`というファイルです。
-VisualStudio Codeの`settings.json`などでルールを固定化している方は、`.markuplintrc`が存在するとルールが上書きされますので、`.markuplintrc`を削除してお使いください。
+設定ファイルはこの README.md と同じ階層にある`.markuplintrc`というファイルです。
+VisualStudio Code の`settings.json`などでルールを固定化している方は、`.markuplintrc`が存在するとルールが上書きされますので、`.markuplintrc`を削除してお使いください。
 
 [設定ファイルの説明](https://markuplint.dev/ja/docs/configuration)
 
@@ -194,29 +168,26 @@ VisualStudio Codeの`settings.json`などでルールを固定化している方
 
 [プロパティの説明](https://markuplint.dev/ja/docs/configuration/properties)
 
-
 ### その他
 
-あると便利なプラグインも紹介しておきます。  
+あると便利なプラグインも紹介しておきます。
 
 #### Vue Peek
 
-こちらのプラグインを利用する事でVSCodeのPeek機能を`.vue`ファイルでも使用する事が出来るようになります。  
-コンポーネントファイルの量が増えてきた際など役立つかと思います。  
+こちらのプラグインを利用する事で VSCode の Peek 機能を`.vue`ファイルでも使用する事が出来るようになります。  
+コンポーネントファイルの量が増えてきた際など役立つかと思います。
 
 [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek)
 
+## 基本的なコーディング
 
-基本的なコーディング
---------------------------------------------------
+DI-KIT でコーディングを進めるにあたり、基本的な設定やコーディング方法を説明します。
 
-DI-KITでコーディングを進めるにあたり、基本的な設定やコーディング方法を説明します。  
+### ESLint の設定
 
-### ESLintの設定
-
-DI-KITにはデフォルトでESLintのライブラリがインストールされており、コード書式の自動チェックが実行されます。  
+DI-KIT にはデフォルトで ESLint のライブラリがインストールされており、コード書式の自動チェックが実行されます。  
 そのため、各コンポーネントの`name`は以下のように複数単語のアッパーキャメルケース（各単語の先頭を大文字）で命名してください。  
-`name: 'Index'`など1つのワードで作成している場合、コンパイル時にエラーが発生し正常に処理が行われません。  
+`name: 'Index'`など 1 つのワードで作成している場合、コンパイル時にエラーが発生し正常に処理が行われません。
 
 `pages/index.vue`
 
@@ -230,32 +201,32 @@ export default Vue.extend({
 
 #### ルールの除外方法
 
-ESLintのルールを除外したい場合、`.eslintrc.js`ファイルに追記してください。  
-各コンポーネントのnameを複数単語で入力するルールを除外する場合は以下のようにする事で除外できます。  
+ESLint のルールを除外したい場合、`.eslintrc.js`ファイルに追記してください。  
+各コンポーネントの name を複数単語で入力するルールを除外する場合は以下のようにする事で除外できます。
 
 `.eslintrc.js`
 
 ```javascript
 module.exports = {
 	rules: {
-		'vue/multi-word-component-names': 'off'
+		'vue/multi-word-component-names': 'off',
 	},
 }
 ```
 
-その他のルールや設定は以下サイトを参照してください。  
+その他のルールや設定は以下サイトを参照してください。
 
-* [ESLintのルール一覧](https://eslint.org/docs/latest/rules/)
-* [eslint-plugin-vueのルール一覧](https://eslint.vuejs.org/rules/)
+- [ESLint のルール一覧](https://eslint.org/docs/latest/rules/)
+- [eslint-plugin-vue のルール一覧](https://eslint.vuejs.org/rules/)
 
-### CSSの指定方法
+### CSS の指定方法
 
-CSSのグローバル指定は`assets/sass/global.scss`等を利用する事で可能となりますが、ページ毎に固有のCSSを指定したい場合は該当の`.vue`ファイル内で`style`タグを記述します。  
-タグに`scoped`属性を付加する事でCSSの影響範囲をそのファイル内のみに限定することが出来ます。  
+CSS のグローバル指定は`assets/sass/global.scss`等を利用する事で可能となりますが、ページ毎に固有の CSS を指定したい場合は該当の`.vue`ファイル内で`style`タグを記述します。  
+タグに`scoped`属性を付加する事で CSS の影響範囲をそのファイル内のみに限定することが出来ます。
 
 #### 子コンポーネントへのスタイル指定
 
-コンポーネント内で読み込んでいる別のコンポーネント（子コンポーネント）にスタイルを指定したい場合、セレクタの前に`::v-deep`を追記してください。  
+コンポーネント内で読み込んでいる別のコンポーネント（子コンポーネント）にスタイルを指定したい場合、セレクタの前に`::v-deep`を追記してください。
 
 `components/parentComponent.vue`
 
@@ -267,9 +238,9 @@ CSSのグローバル指定は`assets/sass/global.scss`等を利用する事で�
 </style>
 ```
 
-### 外部scriptの読み込み方法
+### 外部 script の読み込み方法
 
-外部scriptの読み込みが必要な場合は以下のように設定してください。  
+外部 script の読み込みが必要な場合は以下のように設定してください。
 
 `nuxt.config.js`
 
@@ -278,7 +249,7 @@ export default {
 	head: {
 		script: [
 			{
-				src: "https://xxxxx.com/ajax/sample.js"
+				src: 'https://xxxxx.com/ajax/sample.js',
 			},
 		],
 	},
@@ -287,7 +258,7 @@ export default {
 
 #### 特定のぺージだけで読み込む
 
-サイト全域で読み込む必要がなく、特定ページだけで読み込みたい場合は該当の`.vue`ファイル内で以下のようにしてください。  
+サイト全域で読み込む必要がなく、特定ページだけで読み込みたい場合は該当の`.vue`ファイル内で以下のようにしてください。
 
 `pages/sample.vue`
 
@@ -307,9 +278,9 @@ export default {
 </script>
 ```
 
-#### jsファイルをプロジェクト内に配置して読み込む
+#### js ファイルをプロジェクト内に配置して読み込む
 
-jsファイルを作成して読み込む場合は`static/js/sample.js`のように配置し`src`の値を以下のようにする事で読み込めます。  
+js ファイルを作成して読み込む場合は`static/js/sample.js`のように配置し`src`の値を以下のようにする事で読み込めます。
 
 `nuxt.config.js`
 
@@ -318,38 +289,37 @@ export default {
 	head: {
 		script: [
 			{
-				src: "js/sample.js"
+				src: 'js/sample.js',
 			},
 		],
 	},
 }
 ```
 
-※特定ページでの読み込みも`src`の値を同じようにするだけです  
+※特定ページでの読み込みも`src`の値を同じようにするだけです
 
-ライブラリの利用
---------------------------------------------------
+## ライブラリの利用
 
-DI-KITにはデフォルトで`FontAwesome`と`GoogleFonts`のライブラリがインストールされています。  
-以下では各ライブラリの使用方法を説明していきます。  
+DI-KIT にはデフォルトで`FontAwesome`と`GoogleFonts`のライブラリがインストールされています。  
+以下では各ライブラリの使用方法を説明していきます。
 
 ### FontAwesome
 
-DI-KITで標準対応しているアイコンは「バージョン6の無料アイコン」です。  
-用意しているスタイルは`Solid`, `Regular`と`Brands`の3種類。  
-アイコンの詳細は[FontAwesome](https://fontawesome.com/v6/search)公式サイトを参照してください。  
+DI-KIT で標準対応しているアイコンは「バージョン 6 の無料アイコン」です。  
+用意しているスタイルは`Solid`, `Regular`と`Brands`の 3 種類。  
+アイコンの詳細は[FontAwesome](https://fontawesome.com/v6/search)公式サイトを参照してください。
 
 #### アイコンの出力
 
-FontAwesomeのアイコンは以下のように「Icon Name」を用いて出力します。  
+FontAwesome のアイコンは以下のように「Icon Name」を用いて出力します。
 
 `pages/sample.vue`
 
 ```javascript
-<font-awesome-icon icon="heart"/>
+<font-awesome-icon icon="heart" />
 ```
 
-スタイルを指定する場合は以下の書式を用いてください。  
+スタイルを指定する場合は以下の書式を用いてください。
 
 `pages/sample.vue`
 
@@ -358,12 +328,12 @@ FontAwesomeのアイコンは以下のように「Icon Name」を用いて出力
 <font-awesome-icon :icon="['far', 'heart']"/>
 ```
 
-※FontAwsoemバージョン6からスタイルの指定方法が`fa-solid`のように変更されていますが、DI-KITでは従来の書式（`fas`）を使用します  
+※FontAwsoem バージョン 6 からスタイルの指定方法が`fa-solid`のように変更されていますが、DI-KIT では従来の書式（`fas`）を使用します
 
-#### layerやtransformの利用
+#### layer や transform の利用
 
-layerやtransformを利用する場合は以下のようにします。  
-この場合、envelopeの上にheartのiconが重なって出力されます。  
+layer や transform を利用する場合は以下のようにします。  
+この場合、envelope の上に heart の icon が重なって出力されます。
 
 ```javascript
 <font-awesome-layers class="fa-2x">
@@ -374,7 +344,7 @@ layerやtransformを利用する場合は以下のようにします。
 
 ### GoogleFonts
 
-GoogleFontsは以下のようにフォントをインストールしてからCSSの指定を行います。  
+GoogleFonts は以下のようにフォントをインストールしてから CSS の指定を行います。
 
 `/nuxt.config.js`
 
@@ -386,31 +356,32 @@ export default {
 			'Noto+Sans+JP': [100, 300, 400, 500, 700, 900],
 			Raleway: {
 				wght: [100, 400],
-				ital: [100]
-			}
-		}
+				ital: [100],
+			},
+		},
 	},
 }
 ```
 
-※上記の例ではQuestrialはすべての太さ、Noto Sans JP と Releway は任意の太さのフォントのみインストールしています
+※上記の例では Questrial はすべての太さ、Noto Sans JP と Releway は任意の太さのフォントのみインストールしています
 
-### AdobeFontsの利用方法
+### AdobeFonts の利用方法
 
-DI-KITではAdobeFontsに標準対応していません。  
-利用する場合は以下手順で設定してください。  
+DI-KIT では AdobeFonts に標準対応していません。  
+利用する場合は以下手順で設定してください。
 
-#### AdobeFontsから埋め込み用コードを取得する
+#### AdobeFonts から埋め込み用コードを取得する
 
-まずは、使用したいフォントファミリーを選び、Webプロジェクトを作成してください。  
-プロジェクト作成後に発行される以下のようなコードが取得出来れば次に進みます。  
-##### cssの場合
+まずは、使用したいフォントファミリーを選び、Web プロジェクトを作成してください。  
+プロジェクト作成後に発行される以下のようなコードが取得出来れば次に進みます。
+
+##### css の場合
 
 ```css
 <link rel="stylesheet" href="https://use.typekit.net/xxxxxxxs.css">
 ```
 
-##### scriptの場合
+##### script の場合
 
 ```javascript
 <script>
@@ -427,78 +398,75 @@ DI-KITではAdobeFontsに標準対応していません。
 
 #### 埋め込み用コードをサイト全域で読み込む
 
-上記で取得した埋め込み用コードでjsファイルを作成し`/static/js/adobe_sample.js`のように配置します。  
-配置できたらサイト全域で読み込む設定を行います。  
+上記で取得した埋め込み用コードで js ファイルを作成し`/static/js/adobe_sample.js`のように配置します。  
+配置できたらサイト全域で読み込む設定を行います。
 
-##### cssの場合
+##### css の場合
 
-`nuxt.config.js`  
+`nuxt.config.js`
 
 ```javascript
 export default {
 	head: {
 		link: [
 			{
-				rel: 'stylesheet', href: 'https://use.typekit.net/xxxxxxx.css'
+				rel: 'stylesheet',
+				href: 'https://use.typekit.net/xxxxxxx.css',
 			},
 		],
 	},
 }
 ```
 
-##### scriptの場合
+##### script の場合
 
-`nuxt.config.js`  
+`nuxt.config.js`
 
 ```javascript
 export default {
 	head: {
 		script: [
 			{
-				src: "js/adobe_sample.js"
+				src: 'js/adobe_sample.js',
 			},
 		],
 	},
 }
 ```
 
-#### CSSでフォント指定  
+#### CSS でフォント指定
 
-後は適用したいページでCSSの指定をおこなうだけです。   
+後は適用したいページで CSS の指定をおこなうだけです。
 
-※CSS指定方法の確認は[マイフォントのWebプロジェクト](https://fonts.adobe.com/my_fonts#web_projects-section)ページ内にある、「WEB フォントファミリー」詳細ページで確認できます  
+※CSS 指定方法の確認は[マイフォントの Web プロジェクト](https://fonts.adobe.com/my_fonts#web_projects-section)ページ内にある、「WEB フォントファミリー」詳細ページで確認できます
 
+## WinSCP のミラーリングアップロード
 
-WinSCPのミラーリングアップロード
---------------------------------------------------
+「DI-KIT で制作したコンテンツをテスト環境で確認しながら調整したい」という場合は、[WinSCP](https://winscp.net/eng/docs/lang:jp)などの FTP クライアントにミラーリングアップロード機能があると便利です。
 
-「DI-KITで制作したコンテンツをテスト環境で確認しながら調整したい」という場合は、[WinSCP](https://winscp.net/eng/docs/lang:jp)などのFTPクライアントにミラーリングアップロード機能があると便利です。  
+ここでは WinSCP を用いて`dist`ディレクトリ以下のファイルを監視し`npm run generate`実施後の更新内容を自動で反映する方法を紹介します。
 
-ここではWinSCPを用いて`dist`ディレクトリ以下のファイルを監視し`npm run generate`実施後の更新内容を自動で反映する方法を紹介します。  
-
-まずはWinSCPで対象となるサーバへ接続してください。  
-接続が完了したら、WinSCPのメニューにある「ミラーリングアップロード」をクリックもしくは、キーボードの`Ctrl`と`u`を同時に押してください。  
+まずは WinSCP で対象となるサーバへ接続してください。  
+接続が完了したら、WinSCP のメニューにある「ミラーリングアップロード」をクリックもしくは、キーボードの`Ctrl`と`u`を同時に押してください。  
 ミラーリングアップロードの設定画面が表示されたら「ディレクトリ」の「同期元ローカル ディレクトリ」と「同期先リモート ディレクトリ」を適宜入力してください。  
-入力完了後「転送オプション」の「サブディレクトリも更新する」にチェックが入っている事を確認し「開始」をクリックしてアップロードの完了を待つだけです。  
+入力完了後「転送オプション」の「サブディレクトリも更新する」にチェックが入っている事を確認し「開始」をクリックしてアップロードの完了を待つだけです。
 
-
-Google reCAPTCHA v3の実装方法
---------------------------------------------------
+## Google reCAPTCHA v3 の実装方法
 
 フォームに reCAPTCHA v3 を実装したい時の参考として以下に手順とサンプルコードを示します。  
-プロジェクト毎に適宜編集して利用してください。  
+プロジェクト毎に適宜編集して利用してください。
 
-※reCAPTCHA v3 の詳しい情報は[公式ドキュメント](https://developers.google.com/recaptcha/docs/v3)を参照してください  
+※reCAPTCHA v3 の詳しい情報は[公式ドキュメント](https://developers.google.com/recaptcha/docs/v3)を参照してください
 
 ### サイト・シークレットキーの発行
 
 [Google reCAPTCHA](https://www.google.com/recaptcha/about/)ページへアクセスし、`v3 Admin Console`から新しいサイトの登録を行ってください。  
-登録完了時に発行される「サイトキー」と「シークレットキー」は以降のセクションで必要になるので、コピーを取るなどしておいてください。  
+登録完了時に発行される「サイトキー」と「シークレットキー」は以降のセクションで必要になるので、コピーを取るなどしておいてください。
 
 ### フロントエンド（クライアントサイド）の設定
 
-DI-KITにはreCAPTCHAを簡単に設置するための[recaptcha-module](https://github.com/nuxt-community/recaptcha-module#configuration)がインストールされています。  
-設定ファイル`siteKey:`の値に「サイト・シークレットキーの発行」で取得したサイトキーを設定します。  
+DI-KIT には reCAPTCHA を簡単に設置するための[recaptcha-module](https://github.com/nuxt-community/recaptcha-module#configuration)がインストールされています。  
+設定ファイル`siteKey:`の値に「サイト・シークレットキーの発行」で取得したサイトキーを設定します。
 
 `nuxt.config.js`
 
@@ -508,20 +476,20 @@ export default {
 		hideBadge: false,
 		siteKey: 'サイトキー',
 		version: 3,
-		size: 'compact'
+		size: 'compact',
 	},
 }
 ```
 
-次に、実装したい`.vue`テンプレートの`<form>`に`@submit.prevent="onSubmit"`を追記します。  
+次に、実装したい`.vue`テンプレートの`<form>`に`@submit.prevent="onSubmit"`を追記します。
 
 `form.vue`
 
 ```html
 <form @submit.prevent="onSubmit">
-  <input type="email" v-model="email">
+	<input type="email" v-model="email" />
 
-  <button type="submit">送信</button>
+	<button type="submit">送信</button>
 </form>
 ```
 
@@ -535,38 +503,36 @@ export default {
 export default {
 	async mounted() {
 		try {
-			await this.$recaptcha.init(); // recaptcha初期化
+			await this.$recaptcha.init() // recaptcha初期化
 		} catch (e) {
-			console.error(e);
+			console.error(e)
 		}
 	},
 	beforeDestroy() {
-		this.$recaptcha.destroy(); // reCAPTCHAに関するデータを破棄する
+		this.$recaptcha.destroy() // reCAPTCHAに関するデータを破棄する
 	},
 	methods: {
 		async onSubmit() {
 			try {
-				const token = await this.$recaptcha.execute('login'); // トークンの取得
+				const token = await this.$recaptcha.execute('login') // トークンの取得
 
 				// バックエンドへ送信する処理をここに実装してください
-
-
 			} catch (error) {
-				console.log('submit error:', error);
+				console.log('submit error:', error)
 			}
 		},
-	}
+	},
 }
 ```
 
 ### バックエンド（サーバサイド）の設定
 
 フロントエンドから送信されたトークンが有効なものかバックエンドで検証する必要があります。  
-検証結果に応じた処理を実装してください。 
+検証結果に応じた処理を実装してください。
 
-以下ではPHPを用いた際のサンプルコードを示します。  
-実際の処理はプロジェクト毎に適宜作成してください。  
- 
+以下では PHP を用いた際のサンプルコードを示します。  
+実際の処理はプロジェクト毎に適宜作成してください。
+
 ```php
 // reCAPTCHA --------------------------------------------------
 
@@ -620,21 +586,18 @@ else {
 
 ※`$secret`の値は「サイト・シークレットキーの発行」で取得したシークレットキーに置き換えください。
 
+## トラブルシューティング
 
-トラブルシューティング
---------------------------------------------------
+DI-KIT で制作中に起こりうる「表示されない」や「動作しない」場合の確認内容・対応について記します。
 
-DI-KITで制作中に起こりうる「表示されない」や「動作しない」場合の確認内容・対応について記します。  
-
-
-### FontAwesomeのアイコンが表示されない
+### FontAwesome のアイコンが表示されない
 
 FontAwesome v6 に存在しないアイコン名を使用している可能性があります。  
-詳細は以下を実施してエラーが出ていないか確認してみてください。  
+詳細は以下を実施してエラーが出ていないか確認してみてください。
 
 1. ローカル環境にて該当ページを開く
 2. ページリロードをおこなう
-3. 「DI-KITの起動方法」で立ち上げたコマンドプロンプトもしくはターミナルを確認
+3. 「DI-KIT の起動方法」で立ち上げたコマンドプロンプトもしくはターミナルを確認
 
 ※参考：アイコン名が存在しない場合のエラー文
 
@@ -645,17 +608,14 @@ ERROR  Could not find one or more icon(s) {
 } {}
 ```
 
+### ローカル開発でバックエンド処理が動作しない
 
-### ローカル開発でバックエンド処理が動作しない  
-
-DI-KITではローカルでのバックエンド処理は標準対応していません。  
-テスト環境などにアップロードして動作確認をおこなってください。  
-
+DI-KIT ではローカルでのバックエンド処理は標準対応していません。  
+テスト環境などにアップロードして動作確認をおこなってください。
 
 ### 警告文が表示される
 
-コマンドプロンプトもしくはターミナルに表示される警告文の対応方法です。  
-
+コマンドプロンプトもしくはターミナルに表示される警告文の対応方法です。
 
 #### `Browserslist`
 
@@ -669,7 +629,6 @@ DI-KITではローカルでのバックエンド処理は標準対応してい�
 
 1. コマンドプロンプト／ターミナルを開きプロジェクトのルートディレクトリまで移動
 2. `npx browserslist@latest --update-db`を実行
-
 
 #### `PostCSS`
 
@@ -685,12 +644,10 @@ DI-KITではローカルでのバックエンド処理は標準対応してい�
 export default {
 	build: {
 		postcss: false,
-	}
+	},
 }
 ```
 
-
-お問い合わせ
---------------------------------------------------
+## お問い合わせ
 
 お問い合わせ・取材申し込みは info@di-coding.com までご連絡ください。
