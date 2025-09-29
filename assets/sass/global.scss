@@ -1,0 +1,21 @@
+/**
+ * @fileOverview サイト全域に影響させるグローバルなスタイル指定
+ */
+
+body {
+	min-width: 320px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+main {
+	min-height: 600px;
+}
+.container {
+	max-width: 1280px;
+	padding: 0 max(5%, 20px);
+	margin: 0 auto;
+}
+.container-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
