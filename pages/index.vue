@@ -1,6 +1,5 @@
 <template>
 	<div class="site">
-		<SiteHeader :is-page-title="true" />
 		<main class="site--body">
 			<div class="container">
 				<SlideShowVueCarousel />
@@ -28,7 +27,6 @@
 				</section>
 			</div>
 		</main>
-		<SiteFooter />
 	</div>
 </template>
 

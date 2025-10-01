@@ -1,6 +1,5 @@
 <template>
 	<div class="site">
-		<SiteHeader />
 		<main class="site--body">
 			<section class="about">
 				<div class="container">
@@ -15,7 +14,6 @@
 				</div>
 			</section>
 		</main>
-		<SiteFooter />
 	</div>
 </template>
 

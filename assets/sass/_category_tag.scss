@@ -1,0 +1,22 @@
+/**
+ * カテゴリータグの色管理用
+ */
+
+@use 'color';
+
+.category_tag-notice {
+	background: #{color.$tagNoticeBg} !important;
+	color: #{color.$tagNoticeText} !important;
+}
+.category_tag-activity {
+	background: #{color.$tagActivityBg} !important;
+	color: #{color.$tagActivityText} !important;
+}
+.category_tag-pr {
+	background: #{color.$tagPrBg} !important;
+	color: #{color.$tagPrText} !important;
+}
+.category_tag-recruit {
+	background: #{color.$tagRecruitBg} !important;
+	color: #{color.$tagRecruitText} !important;
+}

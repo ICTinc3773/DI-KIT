@@ -1,6 +1,5 @@
 <template>
 	<div class="site">
-		<SiteHeader />
 		<main class="site--body">
 			<div class="completed">
 				<div class="container">
@@ -13,7 +12,6 @@
 				</div>
 			</div>
 		</main>
-		<SiteFooter />
 	</div>
 </template>
 

@@ -1,0 +1,17 @@
+/**
+ * 汎用的なユーティリティクラス
+ */
+
+@use './bp';
+
+@media (min-width: #{bp.$bp-ui_change + 1}) {
+	.sp_only {
+		display: none;
+	}
+}
+
+@media (max-width: #{bp.$bp-ui_change}) {
+	.pc_only {
+		display: none;
+	}
+}

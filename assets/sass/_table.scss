@@ -1,0 +1,58 @@
+@use './bp';
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+
+	th,
+	td {
+		padding: 18px 29px;
+		border: 1px solid #ececec;
+		vertical-align: top;
+		word-wrap: break-word;
+	}
+	th {
+		width: 21.875%;
+		min-width: 280px;
+		background: #f5fbfd;
+		font-weight: normal;
+		text-align: left;
+	}
+
+	@media (min-width: #{bp.$bp-ui_change + 1}) {
+		th {
+			border-right: none;
+		}
+		td {
+			border-left: none;
+		}
+	}
+}
+@media (max-width: #{bp.$bp-ui_change}) {
+	.table {
+		display: block;
+
+		tbody,
+		tr,
+		th,
+		td {
+			display: block;
+			width: 100%;
+		}
+		th,
+		td {
+			padding: 16px;
+		}
+		td {
+			border-top: none;
+		}
+		tr {
+			& + tr {
+				th {
+					border-top: none;
+				}
+			}
+		}
+	}
+}

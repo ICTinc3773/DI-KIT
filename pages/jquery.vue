@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<SiteHeader />
 		<main class="site--body">
 			<section class="jquery">
 				<div class="container">
@@ -73,7 +72,6 @@ useHead({
 				</div>
 			</section>
 		</main>
-		<SiteFooter />
 	</div>
 </template>
 

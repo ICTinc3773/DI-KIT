@@ -1,0 +1,33 @@
+// カラーパレットの設定
+// ==================================================
+// 色番号を変数で管理。
+
+// 使用方法
+// --------------------------------------------------
+//
+// 任意のプロパティ値に変数を使用する。
+//
+// 例） color: #{variables.$white};
+//
+
+$primary: #393f4c;
+$secondary: #509cd3;
+$accent: #ccad58;
+$text: #333333;
+$white: #fff;
+
+/**
+ * 新着情報タグの色
+ */
+// お知らせ
+$tagNoticeBg: #509cd3;
+$tagNoticeText: #ffffff;
+// 活動
+$tagActivityBg: #e3f4ff;
+$tagActivityText: #509cd3;
+// プレスリリース
+$tagPrBg: #ccad58;
+$tagPrText: #ffffff;
+// 採用情報
+$tagRecruitBg: #393f4c;
+$tagRecruitText: #ffffff;

@@ -1,7 +1,5 @@
 <template>
 	<div class="site">
-		<!-- サイトのヘッダー -->
-		<SiteHeader />
 		<main class="site--body">
 			<section class="inquiry">
 				<div class="container">
@@ -126,8 +124,6 @@
 				</div>
 			</section>
 		</main>
-		<!-- サイトのフッター -->
-		<SiteFooter />
 	</div>
 </template>
 

@@ -1,0 +1,72 @@
+/**
+ * ボタン
+ */
+@use 'color';
+
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 240px;
+	min-height: 4em;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+// .btn-common
+// --------------------------------------------------
+//
+// 背景なし、黒字・黒枠の通常ボタン
+.btn-common {
+	color: #{color.$primary};
+	border: 1px solid #{color.$primary};
+
+	&:hover {
+		background: #242424;
+		color: #fff;
+		transition: 0.6s;
+	}
+}
+// 背景なし、白字・白枠の通常ボタン
+.btn-common-reverse {
+	color: #ffffff;
+	border: 1px solid #ffffff;
+
+	&:hover {
+		background: #242424;
+		color: #ffffff;
+		transition: 0.6s;
+	}
+}
+
+// .btn-submit
+// --------------------------------------------------
+//
+// フォームの送信ボタン
+
+.btn-submit {
+	background: #393f4c;
+	color: #ffffff;
+	font-weight: bold;
+
+	&:hover {
+		opacity: 0.7;
+		transition: 0.6s;
+	}
+}
+
+.btn-outline-submit {
+	background: #fff;
+	color: #393f4c;
+	font-weight: bold;
+	border: 1px solid #393f4c;
+
+	&:hover {
+		opacity: 0.7;
+		background: #393f4c;
+		color: #fff;
+		transition: 0.6s;
+	}
+}

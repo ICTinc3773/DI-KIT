@@ -1,0 +1,89 @@
+a.link_btn {
+	display: inline-block;
+	width: 240px;
+	padding: 15px 0;
+	border: 1px solid #383c57;
+	color: #fff;
+	text-align: center;
+	background-color: #383c57;
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	span {
+		position: relative;
+
+		.icon {
+			width: 10px;
+			height: 16px;
+			position: absolute;
+			top: 50%;
+			right: -22px;
+			transform: translateY(-50%);
+		}
+	}
+}
+a.link_btn-gradient {
+	display: inline-block;
+	max-width: 315px;
+	width: 100%;
+	padding: 15px 0;
+	border: 1px solid #393f4c;
+	color: #ffffff;
+	font-weight: 600;
+	cursor: pointer;
+	text-align: center;
+
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5ecff+0,49bee7+100 */
+	background: #393f4c; /* Old browsers */
+	background: -moz-linear-gradient(#393f4c 0%, #6b7791 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(#393f4c 0%, #6b7791 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(#393f4c 0%, #6b7791 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#393F4C', endColorstr='#6B7791',GradientType=0 ); /* IE6-9 */
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+a.link_btn-gradient-pc {
+	display: inline-block;
+	max-width: 310px;
+	width: 100%;
+	padding: 28px 0 25px;
+	border-radius: 3px;
+	color: #ffffff;
+	font-weight: 600;
+	cursor: pointer;
+	text-align: center;
+
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5ecff+0,49bee7+100 */
+	background: -moz-linear-gradient(130deg, #6b7791 0%, #393f4c 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(130deg, #6b7791 0%, #393f4c 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(130deg, #6b7791 0%, #393f4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6B7791', endColorstr='#393F4C',GradientType=0 ); /* IE6-9 */
+	@media screen and (max-width: 1080px) {
+		padding: 20px 0 18px;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+a.link_btn-reverse {
+	display: inline-block;
+	padding: 12px 0 11px;
+	border: 1px solid #383c57;
+	color: #383c57;
+	cursor: pointer;
+	text-align: center;
+	background-color: #fafafa;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+a.link_btn-skeleton {
+	background-color: transparent;
+	border: 1px solid #ffffff;
+}

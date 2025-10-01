@@ -1,0 +1,143 @@
+@use 'bp';
+
+/**
+ * フォーム
+ */
+.form {
+	input[type='text'],
+	textarea,
+	select {
+		padding: 1.5em;
+		background: #f7f7f7;
+		border: 1px solid #ececec;
+		border-radius: 4px;
+	}
+	::placeholder {
+		color: #bcbcbc;
+	}
+}
+
+// .form--group
+// --------------------------------------------------
+//
+// フォームのラベルと入力項目を横並びにする場合に使用する
+//
+// <div class="form--group">
+// 	<label for="message">お問い合わせ内容 <span class="form--required">必須</span></label>
+// 	<textarea name="message" id="message" placeholder="お問い合わせ内容をご入力ください" required></textarea>
+// </div>
+
+.form--group {
+	display: flex;
+	gap: 1em;
+	align-items: baseline;
+
+	@media (max-width: #{bp.$bp-ui_change}) {
+		flex-direction: column;
+		align-items: initial;
+	}
+
+	& + .form--group {
+		margin-top: 30px;
+	}
+
+	& > label {
+		@media (min-width: #{bp.$bp-ui_change + 1}) {
+			width: 22.2%;
+		}
+	}
+
+	& > input,
+	& > textarea {
+		flex: 1;
+	}
+}
+
+// .form--checkbox
+// --------------------------------------------------
+//
+// チェックボックスを配置する場合に使用する
+//
+// <label class="form--checkbox">
+// 	<input type="checkbox" name="privacy" id="privacy" required />
+// 	<span>同意する</span>
+// </label>
+
+.form--checkbox {
+	display: flex;
+	padding: 1.5em;
+	background: #f7f7f7;
+	border: 1px solid #ececec;
+	gap: 0.5em;
+	cursor: pointer;
+
+	input[type='checkbox'] {
+		width: 1.5em;
+		height: 1.5em;
+		background: transparent;
+		border: 1px solid #bcbcbc;
+	}
+}
+
+// .form--radio
+// --------------------------------------------------
+//
+// ラジオボタンを配置する場合に使用する
+//
+// <label for="inexperienced_engineer" class="form--radio">
+// 	<input type="radio" name="inexperienced_engineer" id="inexperienced_engineer" value="【未経験】ウェブエンジニア" />
+// 	<span>【未経験】ウェブエンジニア</span>
+// </label>
+
+.form--radio {
+	display: flex;
+	gap: 0.25em;
+	cursor: pointer;
+
+	input[type='radio'] {
+		width: 1.5em;
+		height: 1.5em;
+		// background: transparent;
+	}
+}
+
+// .form--block
+// --------------------------------------------------
+//
+// フォームの右カラムに複数の要素を配置したい場合に使用する
+//
+// <div class="form--group">
+// 	<label for="privacy">個人情報の取り扱い <span class="form--required">必須</span></label>
+// 	<div class="form--block">
+// 		<p>ご記入いただいた個人情報は、お問い合わせに対する回答のためにのみ利用いたします。</p>
+// 		<label class="form--checkbox">
+// 			<input type="checkbox" name="privacy" id="privacy" required />
+// 			<span>同意する</span>
+// 		</label>
+// 	</div>
+// </div>
+
+.form--block {
+	flex: 1;
+}
+
+// .form--required
+// --------------------------------------------------
+//
+// 必須入力を示すタグ
+// <label>の子要素として配置するのが基本
+//
+// 	<label for="privacy">個人情報の取り扱い <span class="form--required">必須</span></label>
+
+.form--required {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 3em;
+	height: 1.7em;
+	margin-left: 0.5em;
+	background: #ccad58;
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 1;
+}

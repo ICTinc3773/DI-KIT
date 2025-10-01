@@ -153,18 +153,12 @@ DI-KIT では HTML の構文チェックを行っていないので、markuplint
 
 [Markuplint プラグイン](https://marketplace.visualstudio.com/items?itemName=yusukehirao.vscode-markuplint&ssr=false#overview)
 
-設定ファイルはこの README.md と同じ階層にある`.markuplintrc`というファイルです。
-VisualStudio Code の`settings.json`などでルールを固定化している方は、`.markuplintrc`が存在するとルールが上書きされますので、`.markuplintrc`を削除してお使いください。
-
-[設定ファイルの説明](https://markuplint.dev/ja/docs/configuration)
+設定ファイルはこの README.md と同じ階層にある`.nuxt.config.ts`というファイル内の`htmlValidator: {}`です。
+VisualStudio Code の`settings.json`などでルールを固定化している方は、`htmlValidator: {}`が存在するとルールが上書きされることがありますので、その場合は`htmlValidator: {}`を削除してお使いください。
 
 設定ファイルに記述するルールは、以下を参照してください。
 
-[ルールの説明](https://markuplint.dev/ja/docs/rules)
-
-より高度な設定をしたい方は、プロパティ設定のページも併せて参照してください。
-
-[プロパティの説明](https://markuplint.dev/ja/docs/configuration/properties)
+[ルールの説明](https://html-validate.org/rules/index.html)
 
 ### その他
 

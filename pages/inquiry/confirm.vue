@@ -1,6 +1,5 @@
 <template>
 	<div class="site">
-		<SiteHeader />
 		<main class="site--body">
 			<div class="confirm">
 				<div class="confirm--header">
@@ -64,7 +63,6 @@
 				</div>
 			</div>
 		</main>
-		<SiteFooter />
 	</div>
 </template>
 
