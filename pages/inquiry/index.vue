@@ -187,6 +187,15 @@ const getUploadedFileName = () => {
 	return null
 }
 
+useHead({
+	link: [
+		{
+			rel: 'stylesheet',
+			href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
+		},
+	],
+})
+
 // ファイルをBase64に変換
 async function convertFileToBase64(file: Blob) {
 	return new Promise((resolve, reject) => {
@@ -238,10 +247,6 @@ const validateFile = (event: Event) => {
 	}
 }
 </script>
-
-<style scoped>
-@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
-</style>
 
 <style lang="scss" scoped>
 .inquiry {
