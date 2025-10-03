@@ -33,34 +33,26 @@ npm install --save-dev @types/jquery
 </code>
 </pre>
 
-						<h2>手順3: vueファイルを編集</h2>
-						<p>jQueryを使用したい.vueファイル内に、以下を参考にjQueryとjQueryプラグインを読み込ませます。</p>
-						<p>外部スクリプトとしてCDNのURLも指定できますが、publicフォルダ内にファイルを保存して読み込む方法を推奨します。</p>
-						<pre>
-<code>
-useHead({
-	script: [
-		{
-			src: 'js/jquery.min.js',
-		},
-		{
-			src: 'js/jquery.zoom.min.js',
-		},
-	],
-})
-</code>
-</pre>
-
-						<h2>手順4: コンポーネントファイル内の記述</h2>
+						<h2>手順3: コンポーネントファイル内の記述</h2>
 
 						<p>続いて以下のように、実行するコードを記述します。</p>
 						<p>// @ts-ignore の記述は、jQueryプラグインの型定義がどうしてもできない場合のみ使用してください。<br />（TypeScriptの型定義を無効化してしまうので、使用しないほうが望ましいです）</p>
+						<p>loadScript関数については、`pages/jquery.vue`のコード内コメントを参照してください。</p>
 						<pre>
 <code>
-	onMounted(() => {
+onMounted(async () => {
+	// 必ず jQueryコアファイル → プラグインの順で
+	await loadScript('/js/jquery.min.js')
+	await loadScript('/js/jquery.zoom.min.js')
+
+	const $ = (window as any).$
+	if ($ && typeof $.fn?.zoom === 'function') {
 		// @ts-ignore
 		$('#sampleImage').zoom()
-	})
+	} else {
+		console.warn('jQuery or zoom plugin not available')
+	}
+})
 </code>
 </pre>
 
@@ -78,19 +70,44 @@ useHead({
 <script setup lang="ts">
 useHead({
 	title: 'jQueryとの併用',
-	script: [
-		{
-			src: 'js/jquery.min.js',
-		},
-		{
-			src: 'js/jquery.zoom.min.js',
-		},
-	],
 })
 
-onMounted(() => {
-	// @ts-ignore
-	$('#sampleImage').zoom()
+/**
+ * 指定した `src` の <script> を動的に読み込む関数。
+ * すでに同一の `src` を持つ <script> が存在する場合は新たに挿入せず、即座に解決します。
+ *
+ * @param src - 読み込むスクリプトの URL / パス。`public/` 配下のファイルは絶対パスで指定してください（例: `/js/jquery.min.js`）。
+ * @returns スクリプトの `load` 完了時に解決される Promise。
+ * @throws 読み込みに失敗した場合、`Error` を投げます（Promise を reject）。
+ */
+function loadScript(src: string): Promise<void> {
+	return new Promise((resolve, reject) => {
+		// すでに同じsrcのscriptがある場合は待たずにresolve
+		if ([...document.scripts].some((s) => s.src.endsWith(src))) {
+			resolve()
+			return
+		}
+		const el = document.createElement('script')
+		el.src = src
+		el.async = true
+		el.onload = () => resolve()
+		el.onerror = (e) => reject(e)
+		document.head.appendChild(el)
+	})
+}
+
+onMounted(async () => {
+	// 必ず jQueryコアファイル → プラグインの順で
+	await loadScript('/js/jquery.min.js')
+	await loadScript('/js/jquery.zoom.min.js')
+
+	const $ = (window as any).$
+	if ($ && typeof $.fn?.zoom === 'function') {
+		// @ts-ignore
+		$('#sampleImage').zoom()
+	} else {
+		console.warn('jQuery or zoom plugin not available')
+	}
 })
 </script>
 

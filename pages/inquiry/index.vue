@@ -187,15 +187,6 @@ const getUploadedFileName = () => {
 	return null
 }
 
-useHead({
-	link: [
-		{
-			rel: 'stylesheet',
-			href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css',
-		},
-	],
-})
-
 // ファイルをBase64に変換
 async function convertFileToBase64(file: Blob) {
 	return new Promise((resolve, reject) => {
@@ -274,7 +265,7 @@ const validateFile = (event: Event) => {
 			padding: 8px;
 			border: 1px solid #ccc;
 			border-radius: 4px;
-			font-size: 1rem;
+			font-size: 16px;
 			box-sizing: border-box;
 
 			&:focus {
@@ -285,7 +276,6 @@ const validateFile = (event: Event) => {
 
 		.error-message {
 			color: red;
-			font-size: 0.875rem;
 			margin-top: 5px;
 		}
 	}
@@ -317,6 +307,7 @@ const validateFile = (event: Event) => {
 		margin-bottom: 15px;
 
 		legend {
+			font-size: 16px;
 			font-weight: bold;
 			padding: 0 5px;
 		}
@@ -334,7 +325,7 @@ const validateFile = (event: Event) => {
 		display: block;
 		width: 100%;
 		padding: 10px;
-		font-size: 1rem;
+		font-size: 16px;
 		font-weight: bold;
 		color: #fff;
 		background-color: #007bff;
