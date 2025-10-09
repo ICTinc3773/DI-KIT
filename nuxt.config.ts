@@ -22,7 +22,7 @@ export default defineNuxtConfig({
 	},
 
 	css: ['normalize.css', '@/assets/sass/global.scss', '@fortawesome/fontawesome-svg-core/styles.css'],
-	modules: ['vue3-carousel-nuxt', '@nuxtjs/google-fonts', '@nuxtjs/html-validator', '@vesp/nuxt-fontawesome', '@pinia/nuxt'],
+	modules: ['vue3-carousel-nuxt', '@nuxtjs/google-fonts', '@nuxtjs/html-validator', '@vesp/nuxt-fontawesome', '@pinia/nuxt', '@unlazy/nuxt'],
 
 	runtimeConfig: {
 		public: {

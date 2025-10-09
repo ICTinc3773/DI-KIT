@@ -25,6 +25,15 @@
 						</AccordionList>
 					</div>
 				</section>
+
+				<section class="lazyload">
+					<header class="lazyload--header">
+						<h2>画像遅延ローディング</h2>
+					</header>
+					<div class="lazyload--body">
+						<UnLazyImage src="/images/logo.svg" alt="" />
+					</div>
+				</section>
 			</div>
 		</main>
 	</div>
