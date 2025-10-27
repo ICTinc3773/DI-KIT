@@ -429,6 +429,17 @@ export default defineNuxtConfig({
 
 ※CSS 指定方法の確認は[マイフォントの Web プロジェクト](https://fonts.adobe.com/my_fonts#web_projects-section)ページ内にある、「WEB フォントファミリー」詳細ページで確認できます
 
+## 画像遅延ローディング（UnLazyImage）
+
+画像遅延ローディング用に、UnLazyImageをバンドルしています。
+
+https://nuxt.com/modules/unlazy
+
+NuxtImageでも遅延ローディングは可能ですが、srcsetが強制出力されるため、シンプルに遅延ローディングだけを実装できるUnLazyImageを推奨しています。  
+詳細な設定などは、以下のUnlazy本体のドキュメントを参照してください。
+
+https://unlazy.byjohann.dev/integrations/nuxt
+
 ## WinSCP のミラーリングアップロード
 
 「DI-KIT で制作したコンテンツをテスト環境で確認しながら調整したい」という場合は、[WinSCP](https://winscp.net/eng/docs/lang:jp)などの FTP クライアントにミラーリングアップロード機能があると便利です。
