@@ -39,6 +39,14 @@
 	</div>
 </template>
 
+<script lang="ts">
+// サイトヘッダーのサイトロゴ部分をh1で出力する指定（原則トップページのみ）
+definePageMeta({
+	layout: 'default',
+	isPageTitle: true,
+})
+</script>
+
 <style lang="scss" scoped>
 /*
 Sass変数を使用する場合は、各コンポーネントに@useを記述する。

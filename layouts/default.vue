@@ -1,3 +1,31 @@
+<template>
+	<div class="site">
+		<header class="site--header">
+			<div class="container">
+				<div class="container-flex">
+					<div class="site_title">
+						<h1 v-if="isPageTitle"><NuxtLink to="/">DI-KIT</NuxtLink></h1>
+						<p v-else><NuxtLink to="/">DI-KIT</NuxtLink></p>
+					</div>
+					<GnavMb />
+				</div>
+				<GnavPc />
+			</div>
+		</header>
+
+		<main class="site--body">
+			<slot />
+		</main>
+		<footer class="site--footer">
+			<div class="copyright">
+				<div class="content_wrapper">
+					<p>&copy;2024 ICT inc.</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</template>
+
 <script setup lang="ts">
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
@@ -38,6 +66,8 @@ useHead({
 
 const route = useRoute()
 
+const isPageTitle = computed(() => route.meta.isPageTitle === true)
+
 /**
  * Google reCAPTCHAバッジの表示切り替え
  */
@@ -76,16 +106,6 @@ onMounted(() => {
 })
 </script>
 
-<template>
-	<div class="site">
-		<SiteHeader :is-page-title="true" />
-		<main class="site--body">
-			<slot />
-		</main>
-		<SiteFooter />
-	</div>
-</template>
-
 <style lang="scss" scoped>
 @use '/assets/sass/bp';
 @use '/assets/sass/variables';
@@ -104,5 +124,19 @@ onMounted(() => {
 	@media (min-width: 1981px) {
 		margin: auto;
 	}
+}
+
+.site_title h1,
+.site_title p {
+	margin: 0.67em 0;
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.copyright {
+	background: #ccc;
+	text-align: center;
+	padding: 0.6em;
 }
 </style>

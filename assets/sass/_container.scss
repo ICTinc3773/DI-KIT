@@ -14,42 +14,7 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.container-site_header {
-	position: relative;
-	box-sizing: border-box;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0;
-	overflow: hidden;
 
-	@media (max-width: #{bp.$bp-ui_change}) {
-		width: 100%;
-		padding: 0;
-	}
-}
-.container-site_footer {
-	box-sizing: border-box;
-	width: 100%;
-	max-width: 1480px; // ※内部の表示有効幅は、左右のpaddingを引いたもの
-	margin: 0 auto;
-	padding: 0 20px;
-	display: flex;
-	gap: 130px;
-
-	@media (max-width: #{bp.$bp-ui_change}) {
-		flex-direction: column;
-		align-items: center;
-		gap: 30px;
-	}
-
-	.pane-1 {
-		flex: 1;
-	}
-	.pane-2,
-	.pane-3 {
-		width: fit-content;
-	}
-}
 .container-home {
 	box-sizing: border-box;
 	width: 100%;
