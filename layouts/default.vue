@@ -10,6 +10,7 @@
 					<GnavMb />
 				</div>
 				<GnavPc />
+				<Breadcrumbs :items="breadcrumbItems" />
 			</div>
 		</header>
 
@@ -65,6 +66,47 @@ useHead({
 })
 
 const route = useRoute()
+
+type BreadcrumbItem = {
+	name: string
+	url?: string
+}
+
+const HOME_BREADCRUMB: BreadcrumbItem = {
+	name: 'ホーム',
+	url: '/',
+}
+
+function formatSegment(segment: string) {
+	const decoded = decodeURIComponent(segment.replace(/^\:/, '').replace(/\[|\]/g, ''))
+	return decoded.replace(/[-_]+/g, ' ') || '/'
+}
+
+const breadcrumbItems = computed<BreadcrumbItem[]>(() => {
+	const matched = route.matched ?? []
+	if (matched.length === 0) return [HOME_BREADCRUMB]
+
+	const items: BreadcrumbItem[] = [HOME_BREADCRUMB]
+
+	matched.forEach((record, index) => {
+		if (!record.path || record.path === '/') return
+
+		const path = record.path.startsWith('/') ? record.path : `/${record.path}`
+		const segments = path.split('/').filter(Boolean)
+		if (segments.length === 0) return
+
+		const labelFromMeta = (record.meta as Record<string, unknown>)?.breadcrumb
+		const name = typeof labelFromMeta === 'string' && labelFromMeta.trim().length > 0 ? labelFromMeta : formatSegment(segments[segments.length - 1])
+		const isLast = index === matched.length - 1
+
+		items.push({
+			name,
+			url: isLast ? undefined : path,
+		})
+	})
+
+	return items
+})
 
 const isPageTitle = computed(() => route.meta.isPageTitle === true)
 

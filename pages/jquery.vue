@@ -64,8 +64,14 @@ console.warn('jQuery or zoom plugin not available')
 </template>
 
 <script setup lang="ts">
+const pageTitle = 'jQueryとの併用'
+
+definePageMeta({
+	breadcrumb: pageTitle,
+})
+
 useHead({
-	title: 'jQueryとの併用',
+	title: pageTitle,
 })
 
 /**

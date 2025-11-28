@@ -1,41 +1,37 @@
 <template>
-	<div class="site">
-		<main class="site--body">
-			<div class="container">
-				<SlideShowVueCarousel />
+	<div class="container">
+		<SlideShowVueCarousel />
 
-				<section class="accordion_list_section">
-					<header class="accordion_list_section--header">
-						<h2>アコーディオンリスト</h2>
-					</header>
-					<div class="accordion_list_section--body">
-						<AccordionList title-text="リスト1">
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-						</AccordionList>
-						<AccordionList title-text="リスト2" :duration="'400'">
-							<li>6</li>
-							<li>7</li>
-							<li>8</li>
-							<li>9</li>
-							<li>10</li>
-						</AccordionList>
-					</div>
-				</section>
-
-				<section class="lazyload">
-					<header class="lazyload--header">
-						<h2>画像遅延ローディング</h2>
-					</header>
-					<div class="lazyload--body">
-						<UnLazyImage src="/images/logo.svg" alt="" />
-					</div>
-				</section>
+		<section class="accordion_list_section">
+			<header class="accordion_list_section--header">
+				<h2>アコーディオンリスト</h2>
+			</header>
+			<div class="accordion_list_section--body">
+				<AccordionList title-text="リスト1">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</AccordionList>
+				<AccordionList title-text="リスト2" :duration="'400'">
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+				</AccordionList>
 			</div>
-		</main>
+		</section>
+
+		<section class="lazyload">
+			<header class="lazyload--header">
+				<h2>画像遅延ローディング</h2>
+			</header>
+			<div class="lazyload--body">
+				<UnLazyImage src="/images/logo.svg" alt="" />
+			</div>
+		</section>
 	</div>
 </template>
 

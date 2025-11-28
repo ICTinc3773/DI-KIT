@@ -14,7 +14,13 @@
 </template>
 
 <script setup lang="ts">
+const pageTitle = 'DI-KITについて'
+
+definePageMeta({
+	breadcrumb: pageTitle,
+})
+
 useHead({
-	title: 'DI-KITについて',
+	title: pageTitle,
 })
 </script>

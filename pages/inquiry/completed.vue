@@ -12,8 +12,14 @@
 </template>
 
 <script setup lang="ts">
+const pageTitle = 'お問い合わせ 送信完了'
+
+definePageMeta({
+	breadcrumb: pageTitle,
+})
+
 useHead({
-	title: 'お問い合わせ 送信完了',
+	title: pageTitle,
 })
 </script>
 

@@ -129,6 +129,16 @@ import * as yup from 'yup'
 import { useInquiryStore } from '@/stores/inquiryStore'
 import { useRouter } from 'vue-router'
 
+const pageTitle = 'お問い合わせ'
+
+definePageMeta({
+	breadcrumb: pageTitle,
+})
+
+useHead({
+	title: pageTitle,
+})
+
 // ストアとルーターのセットアップ
 const inquiryStore = useInquiryStore()
 const router = useRouter()
